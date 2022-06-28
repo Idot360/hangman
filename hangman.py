@@ -59,7 +59,7 @@ def prompt_guess(used_letters):
 def generate_incomplete_word(original_word, guessed_letters):
     '''
     takes the word to be guessed and the letters that have been guessed
-    and generates a string with only the guessed letters visible
+        and generates a string with only the guessed letters visible
 
     Parameters
     ----------
@@ -110,10 +110,11 @@ def main():
         print(f'''
 ----------------------------------------------------------------------------
 \nYou have {incorrect_guesses} incorrect_guesses.''')
-        print("Word:", word, "\n"*40)
+        print("Word:", word)
         
         
         guess = prompt_guess(used_letters)
+        print("\n"*40)
         if guess in original_word:
             print(f"There is {guess} in the word")
             guessed_letters = guessed_letters + guess
