@@ -58,19 +58,21 @@ def prompt_guess(used_letters):
 
 def generate_incomplete_word(original_word, guessed_letters):
     '''
-    
+    takes the word to be guessed and the letters that have been guessed
+    and generates a string with only the guessed letters visible
 
     Parameters
     ----------
-    original_word : TYPE
-        DESCRIPTION.
-    guessed_letters : TYPE
-        DESCRIPTION.
+    original_word : string
+        the original word that the user is supposed to guess
+    guessed_letters : string
+        contains letters that have been guessed
 
     Returns
     -------
-    word : TYPE
-        DESCRIPTION.
+    word : string
+        the original word where the letters that are not guessed
+        are replaced by underscores
 
     '''
     
@@ -86,14 +88,6 @@ def generate_incomplete_word(original_word, guessed_letters):
 
 
 def main():
-    '''
-    
-
-    Returns
-    -------
-    None.
-
-    '''
     
     input('''Welcome to hangman\nPress enter to start''')
     incorrect_guesses = int(0)
@@ -105,7 +99,7 @@ def main():
     
     while incorrect_guesses < 7:
 
-        word = generate_incomplete_word(guessed_letters, original_word)
+        word = generate_incomplete_word(original_word, guessed_letters)
         
         
         if word.isalpha():
