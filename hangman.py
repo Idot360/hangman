@@ -114,7 +114,7 @@ def main():
         
         
         guess = prompt_guess(used_letters)
-        print("\n"*40)
+        print("\n\n\n----------------------------------------------------------------------------")
         if guess in original_word:
             print(f"There is {guess} in the word")
             guessed_letters = guessed_letters + guess
